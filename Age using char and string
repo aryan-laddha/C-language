@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char main()
+{
+    char a[50]="75";
+    printf("age of a person is %s",a);
+    return 0;
+}
