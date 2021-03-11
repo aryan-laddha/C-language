@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[100]="i am Aryan akdaskd  ejhhfhw  ewfhewjfef wdwufu wd  Aryan";
+    char b='a';
+
+    printf("%s",strchr(a,b));
+    return 0;
+
+}
+
+
