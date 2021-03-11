@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[100]="i am Aryan";
+
+    char b[50]="my age is 20";
+    int len;
+    strcpy(a,b);
+    printf("%s",a);
+    len = strlen(a);
+    printf("\n%d",strlen(a));
+    return 0;
+}
+
