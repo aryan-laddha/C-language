@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[100]="i am Aryan";
+    char c[500]="blaah";
+    char b[50]="my age is 20";
+    int len,comp;
+    strcpy(a,b);
+    printf("%s",a);
+    len = strlen(a);
+    printf("\n%d",strlen(a));
+    strcat(a,c);
+    printf("%s",a);
+    printf("\n");
+    comp=strcmp(a,c);
+    printf("%d",comp);
+
+    return 0;
+}
