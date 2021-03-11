@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char main()
+{
+    char a='7';
+    printf("age of a person is %c",a);
+    return 0;
+}
