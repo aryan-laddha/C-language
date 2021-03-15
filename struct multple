@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+ struct laddha
+ {
+     int ayu;
+     int beta;
+     int cute;
+     int don;
+ } aditya;
+ struct mul
+ {
+     int ayu;
+     int beta;
+     int cute;
+     int don;
+ }  aryan;
+ int main(){
+     struct laddha piyush ={1,3};
+     piyush.don = piyush.ayu + piyush.beta + piyush.cute;
+     printf("Piyush : %d\n\n",piyush.don);
+
+     aryan.ayu=5;
+     aryan.beta=3;
+     aryan.cute=4;
+     aryan.don = aryan.ayu + aryan.beta + aryan.cute;
+     printf("aryan : %d\n\n",aryan.don);
+
+}
