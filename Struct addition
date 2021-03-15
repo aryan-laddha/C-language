@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+ struct sum
+ {
+     int a;
+     int b;
+     int c;
+     int d;
+ };
+ int main(){
+ struct sum s;
+ s.a=2;
+ s.b=3;
+ s.c=4;
+ s.d = s.a + s.b + s.c;
+ printf("%d",s.d);
+ }
