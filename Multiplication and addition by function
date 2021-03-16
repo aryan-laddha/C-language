@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//function declaration
+int add(int a,int b);
+int multiply(int a,int b);
+
+//main function
+int main()
+{
+    int m,n,c,d;
+    printf("enter two number");
+    scanf("%d %d",&m,&n);
+    printf("%d + %d = %d\n", m, n, add(m, n));
+    printf("%d*%d=%d\n",m,n,multiply(m,n));
+    return 0;
+}
+// function to add two integer
+int add(int a,int b)
+{
+  return a+b;
+}
+// funtion to multiply two number
+int multiply(int a,int b)
+{
+    return a*b;
+}
