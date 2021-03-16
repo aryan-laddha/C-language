@@ -9,7 +9,7 @@ int multiply(int a,int b);
 int main()
 {
     int m,n,c,d;
-    printf("enter two number");
+    printf("enter two number : \n");
     scanf("%d %d",&m,&n);
     printf("%d + %d = %d\n", m, n, add(m, n));
     printf("%d*%d=%d\n",m,n,multiply(m,n));
