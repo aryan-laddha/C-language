@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  float p;
+  int i,j;
+  printf("Enter Percentage : ");
+  scanf("%f",&p);
+  printf("\n");
+  if(p<=0 && p<=33 )
+  {
+      printf("FAIL");
+  }
+  else
+    {
+        if(p>33 && p<=60 )
+  {
+      printf(" Grade D");
+  }
+  else
+  {
+      if(p>60 && p<=75 )
+  {
+      printf("Grade C");
+  }
+  else
+    {
+        if(p>75 && p<=85)
+  {
+      printf(" Grade B");
+  }
+
+  else
+    {
+        if(p>85 && p<=90 )
+     {
+      printf(" Grade B+");
+     }
+      else
+    {
+        if(p>90 && p<=95 )
+  {
+      printf(" Grade A");
+  }
+   else
+    {
+        if(p>95 && p<100 )
+  {
+      printf(" Grade A+");
+  }
+  else
+    {
+        if(p==100 )
+     {
+      printf(" Grade O");
+     }
+
+
+}
+    }
+}}}}
+    }}
