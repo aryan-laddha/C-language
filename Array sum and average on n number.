@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int i,a[10],add=0,n;
+    float average;
+    printf("total element : ");
+    scanf("%d",&n);
+    printf("enter  numbers :\n");
+    for ( i=0;i<n;i++)
+    {
+    scanf("%d",&a[i]);
+    }
+    for(i=0;i<6;i++)
+    {
+        add=add+a[i];
+    }
+    printf("addition of number is %d\n",add);
+
+    average=add/n;
+    printf("average is : %f",average);
+
+    return 0;
+}
+
