@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int a, b,c,d;
+  scanf("%d",&a);
+  printf("Shift by :");
+  scanf("%d",&b);
+  printf("Right Shift : %d\n",a>>=b);
+  printf("Left Shift : %d\n",a<<=b);
+  return 0;
+
+}
