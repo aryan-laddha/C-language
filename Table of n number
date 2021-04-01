@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int a,i=1,j=1;
+printf("Enter number : ");
+scanf("%d",&a);
+while(i<=a)
+{
+    printf("\nTable of %d : \n\n",i);
+
+    while(j<=10)
+    {
+
+        printf("%d\n",i*j);
+        j++;
+    }
+    j=1;
+    i++;
+
+
+}
+
+}
