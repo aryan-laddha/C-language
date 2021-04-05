@@ -14,7 +14,7 @@ int main()
        }
        for(int k=1;k<=m;k++)
        {
-           printf("%d",i);
+           printf("%d",m);
        }
        m--;
 
