@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   FILE *fp;
+   char data[50]="I am Aryan";
+
+   fp=fopen("my first file.txt","a");
+
+    if ( fp == NULL )
+    {
+        printf( "my first file.txt file failed to open." ) ;
+        return;
+    }else{
+
+            printf("The file is now opened.\n") ;
+         }
+
+    fprintf(fp,data);
+    fclose(fp);
+
+    printf("Data has been written ");
+}
