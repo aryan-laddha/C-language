@@ -1,0 +1,118 @@
+#include<iostream>
+#include<cmath> 
+#include<vector>
+#include<algorithm>
+#include<list>
+#include<iterator>
+#include<set>
+#include<limits.h> 
+#include<cstdlib> 
+#define INF 99999999
+
+using namespace std;
+
+struct Edge{
+
+	int u; 
+  	int v;
+	int w;
+};
+
+class Graph
+{
+
+	int V; 
+  	list <pair<int, int> >*adj; 
+  	vector<Edge> edge;
+
+public:
+
+  Graph( int j ):V(j)
+  {
+	adj=new list< pair<int, int> >[V];
+  }
+  void add_edge(int u,int v, int w){
+
+	adj[u].push_back(make_pair(v, w));
+	adj[v].push_back(make_pair(u, w));
+	Edge e;
+	e.u=u, e.v=v, e.w=w; 
+  	edge.push_back(e);
+}
+
+  void remove_edge(int u,int v, int w){
+
+	adj[u].remove(make_pair(v,w)); 
+    adj[v].remove(make_pair(u,w));
+  }
+
+  int dijstra(int u, int v); 
+  int fmc();
+
+};
+
+int Graph::dijstra(int u, int v)
+{
+	set< pair<int, int> > st; 
+	vector<int> dist(V, INF); 
+	st.insert(make_pair(0, u));
+	dist[u]= 0;
+
+	while (!st.empty())
+	{
+		pair<int, int> tmp = *(st.begin()); 
+  		st.erase(st.begin()); 
+    	int u= tmp.second;
+
+		list< pair<int, int> >::iterator i;
+    	for(i=adj[u].begin();i!=adj[u].end(); ++i){
+
+			int v=(*i).first; 
+    		int weight=(*i).second;
+
+			if (dist[v]> dist[u]+weight)
+   			 {
+				if (dist[v] != INF) 
+          			st.erase(st.find(make_pair(dist[v], v))); 
+      
+              	dist[v]= dist[u] + weight; 
+      			st.insert(make_pair(dist[v], v)); 
+    		}
+  		}
+	} 
+	return dist[v];
+	}
+
+	int Graph :: fmc ( )
+	{
+		int min_cycle = INT_MAX; 
+    	int E=edge.size();
+  		for (int i=0;i<E;i++){
+			Edge e=edge[i]; 
+    		remove_edge(e.u,e.v,e.w);
+			int dist=dijstra(e.u,e.v); 
+   			min_cycle=min(min_cycle, dist + e.w);
+			add_edge(e.u, e.v,e.w);
+  		}
+		return min_cycle;
+    }
+
+	int main(){
+
+	ios_base::sync_with_stdio(false); 
+    cin.tie(0); 
+  	cout.tie(0);
+	int n;
+	cin>>n;
+	Graph g(300); 
+  	for(int i=0;i<n; ++i) {
+		int s,t,w; 
+        cin>>s>>t>>w;
+		g.add_edge(s-1,t-1,w);
+	}
+
+	int k=g.fmc();
+
+	cout<<k<<endl; 
+  	return 0;
+}
